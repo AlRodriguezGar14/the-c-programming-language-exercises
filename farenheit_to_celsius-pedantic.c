@@ -1,5 +1,9 @@
 #include <stdio.h>
 
+#define STEP 20
+#define MIN 0
+#define MAX 300
+
 int	main(void)
 {
 	int		farenheit;
@@ -7,12 +11,11 @@ int	main(void)
 	float	celsius;
 
 	printf("Farenheit\tCelsius\n");
-	farenheit = 0;
-	jump = 20;
-	while (farenheit <= 300)
+	farenheit = MAX;
+	while (farenheit >= MIN)
 	{
 		celsius = 5.0/9.0 * farenheit-32;
 		printf("%8d\t%6.1f\n", farenheit, celsius);
-		farenheit += jump;
+		farenheit -= STEP;
 	}
 }
